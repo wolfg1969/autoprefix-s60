@@ -30,8 +30,8 @@
 #define qtn_areacode_page_hint "用于固定电话"
 
 // ignore list
-#define qtn_ignorelist_page_lable "忽略的号码"
-#define qtn_ignorelist_page_hint "设置忽略的号码，可以使用*和?"
+// #define qtn_ignorelist_page_lable "忽略的号码"
+// #define qtn_ignorelist_page_hint "设置忽略的号码，可以使用*和?"
 
 // autodial
 #define qtn_autodial_page_label "自动呼叫"
@@ -50,7 +50,7 @@
 #define qtn_autodial_settingitem_text_enable "启用"
 
 // delay settingitem texts
-#define qtn_delay_settingitem_text_0 "禁用"
+#define qtn_delay_settingitem_text_0 "不延迟"
 #define qtn_delay_settingitem_text_1 "1秒"
 #define qtn_delay_settingitem_text_2 "2秒"
 #define qtn_delay_settingitem_text_3 "3秒"

@@ -106,12 +106,12 @@ RESOURCE AVKON_SETTING_ITEM_LIST r_settings
 			setting_page_resource = r_areacode_page;
 			name = qtn_areacode_page_lable;
 			},
-		AVKON_SETTING_ITEM
+		/*AVKON_SETTING_ITEM
 			{
 			identifier = ESettingIgnoreList;
 			setting_page_resource = r_ignorelist_page;
 			name = qtn_ignorelist_page_lable;
-			},
+			},*/
 		AVKON_SETTING_ITEM
 			{
 			identifier = ESettingAutoDial;
@@ -167,6 +167,7 @@ RESOURCE AVKON_SETTING_PAGE r_areacode_page
 	hint_text=qtn_areacode_page_hint;
 	}
 	
+/*	
 RESOURCE AVKON_SETTING_PAGE r_ignorelist_page
 	{
 	label=qtn_ignorelist_page_lable;
@@ -174,6 +175,7 @@ RESOURCE AVKON_SETTING_PAGE r_ignorelist_page
 	editor_resource_id = r_ignorelist;
 	hint_text=qtn_ignorelist_page_hint;
 	}
+*/
 	
 RESOURCE AVKON_SETTING_PAGE r_autodial_page
 	{
@@ -191,8 +193,6 @@ RESOURCE AVKON_SETTING_PAGE r_delay_page
 	editor_resource_id = r_delay;
 	hint_text=qtn_delay_page_hint;
 	}
-	
-
 
 // ---------------------------------------------------------
 //   
@@ -220,11 +220,17 @@ RESOURCE AVKON_INTEGER_EDWIN r_areacode
 	{
    	maxlength = 4;
 	}
-	
-RESOURCE AVKON_INTEGER_EDWIN r_ignorelist
+
+/*	
+RESOURCE EDWIN r_ignorelist
 	{
    	maxlength = 100;
+   	lines = 9;
+   	allowed_input_modes = EAknEditorNumericInputMode;
+    default_input_mode = EAknEditorNumericInputMode;
+   	special_character_table = R_AVKON_SPECIAL_CHARACTER_TABLE_DIALOG;
 	}
+*/
 	
 RESOURCE POPUP_SETTING_LIST r_autodial
 	{
@@ -237,6 +243,7 @@ RESOURCE POPUP_SETTING_LIST r_delay
 	// no definitions required - values obtained from 
 	// associated_resource of owning AVKON_SETTING_ITEM_LIST
 	}
+	
 // ---------------------------------------------------------
 //   
 // Second level structures used from settings pages

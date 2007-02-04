@@ -11,7 +11,7 @@
 ;
 ; UID is the app's UID
 ; 
-#{<0x81ea><0x52a8><0x62e8><0x53f7>},(0x200097D2),0,7,3
+#{<0x81ea><0x52a8><0x62e8><0x53f7>},(0x200097D2),0,7,4
 ;
 ;Supports Series 60 v 2.0
 ;This line indicates that this installation is for the Series 60 platform v2.0

@@ -93,11 +93,11 @@ CAknSettingItem * CAutoPrefixSettingList::CreateSettingItemL (TInt aIdentifier)
 											aIdentifier, 
 							 				iSettingsData.AreaCode());
 			break;
-		case ESettingIgnoreList:
-			settingItem = new (ELeave) CAknTextSettingItem (
-											aIdentifier, 
-							 				iSettingsData.IgnoreList());
-			break;
+//		case ESettingIgnoreList:
+//			settingItem = new (ELeave) CAknTextSettingItem (
+//											aIdentifier, 
+//							 				iSettingsData.IgnoreList());
+//			break;
 		case ESettingAutoDial:
 			settingItem = new (ELeave) CAknBinaryPopupSettingItem (
 											aIdentifier, 

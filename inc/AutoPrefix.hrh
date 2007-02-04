@@ -30,7 +30,7 @@ enum TSettingItems
 	ESettingEnable = 1,
 	ESettingPrefixNumber,
 	ESettingAreaCode,
-	ESettingIgnoreList,
+//	ESettingIgnoreList,
 	ESettingAutoDial,
 	ESettingDelay
     };
