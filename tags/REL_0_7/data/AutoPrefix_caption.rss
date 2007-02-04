@@ -1,0 +1,20 @@
+/*
+============================================================================
+ Name        : AutoPrefix_caption.rss
+ Author      : Guo Yong
+ Copyright   : GPL
+ Description : Caption file for AutoPrefix.
+============================================================================
+*/
+CHARACTER_SET UTF8
+
+#define ELanguage ELangPrcChinese
+
+#include "AutoPrefix.loc"
+#include <apcaptionfile.rh>
+
+RESOURCE CAPTION_DATA
+{
+    caption = qtn_app_caption_string;
+    shortcaption = qtn_app_short_caption_string;
+}

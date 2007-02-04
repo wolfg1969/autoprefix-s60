@@ -1,0 +1,65 @@
+/*
+============================================================================
+ Name        : AutoPrefix.loc
+ Author      : Guo Yong
+ Copyright   : GPL
+ Description : This is a localisation file for AutoPrefix
+               A .loc file is the one and only place where the logical
+			   strings to be localised are defined. 
+============================================================================
+*/
+
+// LOCALISATION STRINGS
+
+// menu hide
+#define qtn_app_hide "隐藏"
+
+// menu exit
+#define qtn_app_exit "退出"
+
+// enable
+#define qtn_enable_page_label "加拨号码"
+#define qtn_enable_page_hint "允许加拨号码？"
+
+// prefix number
+#define qtn_prefixnumber_page_lable "要加拨的号码"
+#define qtn_prefixnumber_page_hint "要加拨的号码"
+
+// area code
+#define qtn_areacode_page_lable "要加拨的区号"
+#define qtn_areacode_page_hint "用于固定电话"
+
+// ignore list
+#define qtn_ignorelist_page_lable "忽略的号码"
+#define qtn_ignorelist_page_hint "设置忽略的号码，可以使用*和?"
+
+// autodial
+#define qtn_autodial_page_label "自动呼叫"
+#define qtn_autodial_page_hint "只能呼叫一次（程序会退出）"
+
+// delay
+#define qtn_delay_page_label "自动呼叫前延迟"
+#define qtn_delay_page_hint "自动呼叫前延迟"
+
+// enable settingitem texts
+#define qtn_enable_settingitem_text_disable "禁用"
+#define qtn_enable_settingitem_text_enable "启用"
+
+// autodial settingitem texts
+#define qtn_autodial_settingitem_text_disable "禁用"
+#define qtn_autodial_settingitem_text_enable "启用"
+
+// delay settingitem texts
+#define qtn_delay_settingitem_text_0 "禁用"
+#define qtn_delay_settingitem_text_1 "1秒"
+#define qtn_delay_settingitem_text_2 "2秒"
+#define qtn_delay_settingitem_text_3 "3秒"
+#define qtn_delay_settingitem_text_5 "5秒"
+#define qtn_delay_settingitem_text_10 "10秒"
+
+// caption strings for app
+#define qtn_app_caption_string "自动加拨"
+
+#define qtn_app_short_caption_string "自动加拨"
+
+
