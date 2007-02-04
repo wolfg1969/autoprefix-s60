@@ -1,0 +1,39 @@
+/*
+============================================================================
+ Name        : AutoPrefix.hrh
+ Author      : Guo Yong
+ Copyright   : GPL
+ Description : This file contains declarations for constants of AutoPrefix.
+               The file can be included in C++ or resource file.
+============================================================================
+*/
+
+#ifndef AUTOPREFIX_HRH
+#define AUTOPREFIX_HRH
+
+
+/**
+ * TMenuCommands - identifiers for commands called from the menu
+ */
+enum TMenuCommands
+{
+	EAutoPrefixCmdHide = 0x1000,	// value out of range of other commands
+	ESettingCmdEdit
+};
+
+
+/**
+ * TSettingItems - identifiers for individual setting items
+ */
+enum TSettingItems
+    {
+	ESettingEnable = 1,
+	ESettingPrefixNumber,
+	ESettingAreaCode,
+	ESettingIgnoreList,
+	ESettingAutoDial,
+	ESettingDelay
+    };
+
+
+#endif      // AUTOPREFIX_HRH

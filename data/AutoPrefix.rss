@@ -1,0 +1,336 @@
+/*
+============================================================================
+ Name        : AutoPrefix.rss
+ Author      : Guo Yong
+ Copyright   : GPL
+ Description : This file contains all the resources for the AutoPrefix.
+============================================================================
+*/
+CHARACTER_SET UTF8
+
+#define ELanguage ELangPrcChinese
+
+//  RESOURCE IDENTIFIER
+NAME    ATPR // 4 letter ID
+
+//  INCLUDES
+
+#include <eikon.rh>
+#include "AutoPrefix.hrh"
+#include "AutoPrefix.loc"
+#include <avkon.rsg>
+#include <avkon.rh>
+#include <avkon.mbg>
+#include <uikon.hrh>
+
+
+
+
+//  RESOURCE DEFINITIONS 
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE TBUF { buf = "AutoPrefix"; }
+
+// ---------------------------------------------------------
+//   
+//    Define default menu and CBA key.
+//
+// ---------------------------------------------------------
+//
+RESOURCE EIK_APP_INFO
+    {
+    }
+    
+    
+//----------------------------------------------------
+//
+//    r_AutoPrefix_cba
+//
+//----------------------------------------------------
+RESOURCE CBA r_autoprefix_cba
+	{
+	buttons =
+		{
+		CBA_BUTTON
+			{
+			id = EAutoPrefixCmdHide;
+			txt = qtn_app_hide;
+			},
+		CBA_BUTTON
+			{
+			id = EAknSoftkeyExit;
+			txt = qtn_app_exit;
+			}
+		};
+	}
+    
+      
+RESOURCE AVKON_VIEW r_firstview
+	{
+	cba=r_autoprefix_cba;
+	}
+    
+// ---------------------------------------------------------
+//   
+// r_settings_item_list
+//
+// settings list - collection of all setting types
+//   
+// ---------------------------------------------------------
+//   
+
+RESOURCE AVKON_SETTING_ITEM_LIST r_settings
+	{
+	title = "Settings";
+	flags= EAknSettingItemNumberedStyle;
+	initial_number = 1;
+	items = 
+		{		
+        AVKON_SETTING_ITEM
+            {
+            identifier = ESettingEnable;
+			setting_page_resource = r_enable_page;
+            associated_resource = r_enable_setting_texts;
+            name = qtn_enable_page_label;
+            },
+        AVKON_SETTING_ITEM
+			{
+			identifier = ESettingPrefixNumber;
+			setting_page_resource = r_prefixnumber_page;
+			name = qtn_prefixnumber_page_lable;
+			},
+		AVKON_SETTING_ITEM
+			{
+			identifier = ESettingAreaCode;
+			setting_page_resource = r_areacode_page;
+			name = qtn_areacode_page_lable;
+			},
+		AVKON_SETTING_ITEM
+			{
+			identifier = ESettingIgnoreList;
+			setting_page_resource = r_ignorelist_page;
+			name = qtn_ignorelist_page_lable;
+			},
+		AVKON_SETTING_ITEM
+			{
+			identifier = ESettingAutoDial;
+			setting_page_resource = r_autodial_page;
+			associated_resource = r_autodial_setting_texts;
+			name = qtn_autodial_page_label;
+			},
+        AVKON_SETTING_ITEM
+			{
+			identifier = ESettingDelay;
+			setting_page_resource = r_delay_page;
+			associated_resource = r_delay_setting_texts;
+			name = qtn_delay_page_label;
+			}             
+		};
+	}
+
+// ---------------------------------------------------------
+//   
+// Settings Pages
+//
+// defines the AVKON_SETTING_PAGE structures referred to in 
+// setting_page_resource fields above.
+// 
+// These structures define the way in which the editors used
+// to change the setting data are presented.
+// 
+// ---------------------------------------------------------
+//  
+
+RESOURCE AVKON_SETTING_PAGE r_enable_page
+	{
+	number= EAknSettingPageNoOrdinalDisplayed;
+	label=qtn_enable_page_label;
+	type = EAknCtPopupSettingList;
+	editor_resource_id = r_enable;
+	hint_text=qtn_enable_page_hint;
+	}
+	
+RESOURCE AVKON_SETTING_PAGE r_prefixnumber_page
+	{
+	label=qtn_prefixnumber_page_lable;
+	type = EAknCtIntegerEdwin;
+	editor_resource_id = r_prefixnumber;
+	hint_text=qtn_prefixnumber_page_hint;
+	}
+	
+RESOURCE AVKON_SETTING_PAGE r_areacode_page
+	{
+	label=qtn_areacode_page_lable;
+	type = EAknCtIntegerEdwin;
+	editor_resource_id = r_areacode;
+	hint_text=qtn_areacode_page_hint;
+	}
+	
+RESOURCE AVKON_SETTING_PAGE r_ignorelist_page
+	{
+	label=qtn_ignorelist_page_lable;
+	type = EAknCtIntegerEdwin;
+	editor_resource_id = r_ignorelist;
+	hint_text=qtn_ignorelist_page_hint;
+	}
+	
+RESOURCE AVKON_SETTING_PAGE r_autodial_page
+	{
+	label=qtn_autodial_page_lable;
+	type = EAknCtPopupSettingList;
+	editor_resource_id = r_autodial;
+	hint_text=qtn_autodial_page_hint;
+	}
+	
+RESOURCE AVKON_SETTING_PAGE r_delay_page
+	{
+	number= EAknSettingPageNoOrdinalDisplayed;
+	label=qtn_delay_page_label;
+	type = EAknCtPopupSettingList;
+	editor_resource_id = r_delay;
+	hint_text=qtn_delay_page_hint;
+	}
+	
+
+
+// ---------------------------------------------------------
+//   
+// Editor Controls
+//
+// This section defines the controls referred to from the
+// editor_resource_id sections of the AVKON_SETTING_PAGE
+// resources above.
+// 
+// ---------------------------------------------------------
+//  
+RESOURCE POPUP_SETTING_LIST r_enable
+	{
+	// no definitions required - values obtained from 
+	// associated_resource of owning AVKON_SETTING_ITEM_LIST
+	}
+
+	
+RESOURCE AVKON_INTEGER_EDWIN r_prefixnumber
+	{
+   	maxlength = 5;
+	}
+	
+RESOURCE AVKON_INTEGER_EDWIN r_areacode
+	{
+   	maxlength = 4;
+	}
+	
+RESOURCE AVKON_INTEGER_EDWIN r_ignorelist
+	{
+   	maxlength = 100;
+	}
+	
+RESOURCE POPUP_SETTING_LIST r_autodial
+	{
+	// no definitions required - values obtained from 
+	// associated_resource of owning AVKON_SETTING_ITEM_LIST
+	}
+	
+RESOURCE POPUP_SETTING_LIST r_delay
+	{
+	// no definitions required - values obtained from 
+	// associated_resource of owning AVKON_SETTING_ITEM_LIST
+	}
+// ---------------------------------------------------------
+//   
+// Second level structures used from settings pages
+// Defines - text strings to be used in display, 
+// and their mapping to enumerated values.
+// 
+// ---------------------------------------------------------
+// 
+	
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_enable_setting_texts
+    {
+    flags = 0;
+    setting_texts_resource = r_enable_settingitem_texts;
+    }
+
+RESOURCE ARRAY r_enable_settingitem_texts
+    {
+    items =
+        {
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 0;
+            text = qtn_enable_settingitem_text_disable;
+            },
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 1;
+            text = qtn_enable_settingitem_text_enable;
+            }
+        };
+    }
+    
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_autodial_setting_texts
+    {
+    flags = 0;
+    setting_texts_resource = r_autodial_settingitem_texts;
+    }
+    
+RESOURCE ARRAY r_autodial_settingitem_texts
+    {
+    items =
+        {
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 0;
+            text = qtn_autodial_settingitem_text_disable;
+            },
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 1;
+            text = qtn_autodial_settingitem_text_enable;
+            }
+        };
+    }
+    
+RESOURCE AVKON_POPUP_SETTING_TEXTS r_delay_setting_texts
+    {
+    flags = 0;
+    setting_texts_resource = r_delay_settingitem_texts;
+    }
+    
+RESOURCE ARRAY r_delay_settingitem_texts
+    {
+    items =
+        {
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 0;
+            text = qtn_delay_settingitem_text_0;
+            },
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 1;
+            text = qtn_delay_settingitem_text_1;
+            },
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 2;
+            text = qtn_delay_settingitem_text_2;
+            },
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 3;
+            text = qtn_delay_settingitem_text_3;
+            },
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 5;
+            text = qtn_delay_settingitem_text_5;
+            },
+        AVKON_ENUMERATED_TEXT
+            {
+            value = 10;
+            text = qtn_delay_settingitem_text_10;
+            } 
+        };
+    }

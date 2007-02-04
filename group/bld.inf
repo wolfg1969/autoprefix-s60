@@ -1,0 +1,17 @@
+/*
+============================================================================
+ Name        : bld.inf
+ Author      : Guo Yong
+ Copyright   : GPL
+ Description : This file provides the information required for building the
+               whole of a AutoPrefix.
+============================================================================
+*/
+
+PRJ_PLATFORMS
+WINSCW THUMB
+
+PRJ_MMPFILES
+
+AutoPrefix.mmp
+

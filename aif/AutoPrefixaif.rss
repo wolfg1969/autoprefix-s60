@@ -1,0 +1,20 @@
+/*
+============================================================================
+ Name        : AutoPrefixaif.rss
+ Author      : Guo Yong
+ Copyright   : GPL
+ Description : RSS for creating the aif file for AutoPrefix.
+============================================================================
+*/
+
+#include <aiftool.rh>
+
+RESOURCE AIF_DATA
+    {
+    app_uid=0x200097D2;
+    num_icons=2;
+    embeddability=KAppNotEmbeddable;
+    newfile=KAppDoesNotSupportNewFile;
+    }
+
+
