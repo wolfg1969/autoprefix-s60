@@ -1,0 +1,38 @@
+/*
+============================================================================
+ Name        : AutoPrefix.mmp
+ Author      : Guo Yong
+ Copyright   : GPL
+ Description : This is the project specification file for AutoPrefix.
+============================================================================
+*/
+
+TARGET  AutoPrefix.app
+TARGETTYPE  app
+UID  0x100039CE 0x200097D2 
+TARGETPATH \system\apps\AutoPrefix
+
+SOURCEPATH ..\src
+SOURCE  AutoPrefixApp.cpp 
+SOURCE  AutoPrefixAppui.cpp
+SOURCE  AutoPrefixDocument.cpp
+SOURCE  AutoPrefixView.cpp
+SOURCE	AutoPrefixSettingList.cpp
+SOURCE	AutoPrefixSettingsData.cpp
+
+SOURCEPATH ..\data
+RESOURCE AutoPrefix.rss
+RESOURCE AutoPrefix_caption.rss
+LANG     31
+
+USERINCLUDE . 
+USERINCLUDE ..\inc
+
+SYSTEMINCLUDE   . \epoc32\include
+
+LIBRARY euser.lib apparc.lib cone.lib eikcore.lib 
+LIBRARY eikcoctl.lib avkon.lib estor.lib efsrv.lib 
+LIBRARY ws32.lib apgrfx.lib etel.lib etelmm.lib
+
+AIF AutoPrefix.aif ..\aif AutoPrefixaif.rss c8 context_pane_icon.bmp context_pane_icon_mask.bmp list_icon.bmp list_icon_mask.bmp
+

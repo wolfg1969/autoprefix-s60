@@ -1,0 +1,30 @@
+; Installation file for AutoPrefix application
+;
+; This is an auto-generated PKG file by Carbide.
+; This file uses variables specific to Carbide builds that will not work
+; on command-line builds. If you want to use this generated PKG file from the
+; command-line tools you will need to modify the variables with the appropriate
+; values: $(EPOCROOT), $(PLATFORM), $(TARGET)
+;
+;Languages
+&ZH
+;
+; UID is the app's UID
+; 
+#{<0x81ea><0x52a8><0x62e8><0x53f7>},(0x200097D2),0,7,3
+;
+;Supports Series 60 v 2.0
+;This line indicates that this installation is for the Series 60 platform v2.0
+;This line must appear _exactly_ as shown below in the sis file
+;If this line is missing or incorrect, the sis file will not be able
+;to be installed on Series 60 v2.0 platforms
+(0x101F7960), 0, 0, 0, {"Series60ProductID"} 
+;
+; Four files to install
+; The PKG file has been set up with a default SDK root.
+; Symbols set up for the source location are Carbide.c++ specific symbols
+"$(EPOCROOT)Epoc32\release\$(PLATFORM)\$(TARGET)\AutoPrefix.app"		  -"!:\system\apps\AutoPrefix\AutoPrefix.app"
+"$(EPOCROOT)Epoc32\data\z\system\apps\AutoPrefix\AutoPrefix.rsc"         -"!:\system\apps\AutoPrefix\AutoPrefix.rsc"
+"$(EPOCROOT)Epoc32\data\z\system\apps\AutoPrefix\AutoPrefix_caption.rsc" -"!:\system\apps\AutoPrefix\AutoPrefix_caption.rsc"
+"$(EPOCROOT)Epoc32\data\z\system\apps\AutoPrefix\AutoPrefix.aif"         -"!:\system\apps\AutoPrefix\AutoPrefix.aif"
+
